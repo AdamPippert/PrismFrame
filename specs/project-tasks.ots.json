@@ -1,0 +1,507 @@
+{
+  "id": "modern-edex-core",
+  "description": "Modern eDEX-UI Core Development",
+  "type": "epic",
+  "status": "inprogress",
+  "priority": 1,
+  "assigned_agent_type": "development_team",
+  "creation_timestamp": "2024-01-15T00:00:00Z",
+  "children": [
+    {
+      "id": "setup-project-structure",
+      "description": "Set up complete project structure with all directories and configuration files",
+      "type": "task",
+      "status": "completed",
+      "priority": 1,
+      "assigned_agent_type": "developer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "labels": ["infrastructure", "setup"]
+    },
+    {
+      "id": "core-architecture",
+      "description": "Implement core Tauri + React + TypeScript architecture",
+      "type": "epic",
+      "status": "inprogress",
+      "priority": 1,
+      "assigned_agent_type": "architect",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "children": [
+        {
+          "id": "tauri-backend-setup",
+          "description": "Set up Tauri backend with Rust configuration",
+          "type": "task",
+          "status": "pending",
+          "priority": 1,
+          "assigned_agent_type": "rust_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["setup-project-structure"],
+          "labels": ["backend", "rust", "tauri"]
+        },
+        {
+          "id": "react-frontend-setup",
+          "description": "Set up React frontend with TypeScript and Vite",
+          "type": "task",
+          "status": "pending",
+          "priority": 1,
+          "assigned_agent_type": "frontend_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["setup-project-structure"],
+          "labels": ["frontend", "react", "typescript"]
+        },
+        {
+          "id": "ipc-communication",
+          "description": "Establish IPC communication between frontend and backend",
+          "type": "task",
+          "status": "pending",
+          "priority": 1,
+          "assigned_agent_type": "fullstack_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["tauri-backend-setup", "react-frontend-setup"],
+          "labels": ["communication", "ipc"]
+        },
+        {
+          "id": "window-management",
+          "description": "Implement window management and fullscreen support",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["ipc-communication"],
+          "labels": ["ui", "windowing"]
+        }
+      ],
+      "labels": ["architecture", "foundation"]
+    },
+    {
+      "id": "theme-system",
+      "description": "Implement flexible theme system with hotkey switching",
+      "type": "epic",
+      "status": "pending",
+      "priority": 2,
+      "assigned_agent_type": "ui_developer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["core-architecture"],
+      "children": [
+        {
+          "id": "theme-config-structure",
+          "description": "Design and implement JSON theme configuration structure",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["themes", "configuration"]
+        },
+        {
+          "id": "theme-loader",
+          "description": "Implement theme loading and validation system",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["theme-config-structure"],
+          "labels": ["themes", "loading"]
+        },
+        {
+          "id": "tron-theme",
+          "description": "Create classic Tron theme with sci-fi aesthetics",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "designer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["theme-loader"],
+          "labels": ["themes", "design"]
+        },
+        {
+          "id": "sysadmin-theme",
+          "description": "Create SysAdmin theme with monitoring focus",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "designer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["theme-loader"],
+          "labels": ["themes", "design"]
+        },
+        {
+          "id": "developer-theme",
+          "description": "Create Developer theme with coding focus",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "designer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["theme-loader"],
+          "labels": ["themes", "design"]
+        },
+        {
+          "id": "theme-hotkeys",
+          "description": "Implement hotkey system for theme switching",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["theme-loader"],
+          "labels": ["themes", "hotkeys"]
+        }
+      ],
+      "labels": ["themes", "ui"]
+    },
+    {
+      "id": "terminal-system",
+      "description": "Implement powerful terminal emulator with modern features",
+      "type": "epic",
+      "status": "pending",
+      "priority": 2,
+      "assigned_agent_type": "terminal_developer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["core-architecture"],
+      "children": [
+        {
+          "id": "xterm-integration",
+          "description": "Integrate xterm.js with WebGL and addons",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "frontend_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["terminal", "xterm"]
+        },
+        {
+          "id": "pty-support",
+          "description": "Implement PTY support for all platforms",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "rust_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["xterm-integration"],
+          "labels": ["terminal", "pty"]
+        },
+        {
+          "id": "terminal-tabs",
+          "description": "Implement multiple terminal tabs with management",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["pty-support"],
+          "labels": ["terminal", "tabs"]
+        },
+        {
+          "id": "terminal-theming",
+          "description": "Integrate terminal with theme system",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["terminal-tabs", "theme-system"],
+          "labels": ["terminal", "themes"]
+        }
+      ],
+      "labels": ["terminal", "emulator"]
+    },
+    {
+      "id": "system-monitoring",
+      "description": "Implement comprehensive real-time system monitoring",
+      "type": "epic",
+      "status": "pending",
+      "priority": 2,
+      "assigned_agent_type": "systems_developer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["core-architecture"],
+      "children": [
+        {
+          "id": "system-info-backend",
+          "description": "Implement system information collection in Rust",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "rust_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["monitoring", "backend"]
+        },
+        {
+          "id": "chart-components",
+          "description": "Create reusable chart components for data visualization",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "frontend_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["system-info-backend"],
+          "labels": ["monitoring", "charts"]
+        },
+        {
+          "id": "realtime-updates",
+          "description": "Implement real-time data updates and WebSocket communication",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "fullstack_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["chart-components"],
+          "labels": ["monitoring", "realtime"]
+        },
+        {
+          "id": "monitoring-dashboard",
+          "description": "Create comprehensive monitoring dashboard UI",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["realtime-updates"],
+          "labels": ["monitoring", "dashboard"]
+        }
+      ],
+      "labels": ["monitoring", "system"]
+    },
+    {
+      "id": "ui-framework",
+      "description": "Establish modern responsive UI framework",
+      "type": "epic",
+      "status": "pending",
+      "priority": 1,
+      "assigned_agent_type": "ui_developer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["core-architecture"],
+      "children": [
+        {
+          "id": "component-library",
+          "description": "Create reusable UI component library",
+          "type": "task",
+          "status": "pending",
+          "priority": 1,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["ui", "components"]
+        },
+        {
+          "id": "layout-system",
+          "description": "Implement flexible layout and panel system",
+          "type": "task",
+          "status": "pending",
+          "priority": 1,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["component-library"],
+          "labels": ["ui", "layout"]
+        },
+        {
+          "id": "responsive-design",
+          "description": "Ensure responsive design across all screen sizes",
+          "type": "task",
+          "status": "pending",
+          "priority": 1,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["layout-system"],
+          "labels": ["ui", "responsive"]
+        },
+        {
+          "id": "accessibility",
+          "description": "Implement accessibility features and standards",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["responsive-design"],
+          "labels": ["ui", "accessibility"]
+        }
+      ],
+      "labels": ["ui", "framework"]
+    },
+    {
+      "id": "hotkey-system",
+      "description": "Implement comprehensive hotkey system",
+      "type": "epic",
+      "status": "pending",
+      "priority": 3,
+      "assigned_agent_type": "ui_developer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["ui-framework"],
+      "children": [
+        {
+          "id": "hotkey-registration",
+          "description": "Implement global hotkey registration system",
+          "type": "task",
+          "status": "pending",
+          "priority": 3,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["hotkeys", "registration"]
+        },
+        {
+          "id": "built-in-hotkeys",
+          "description": "Implement all built-in hotkey combinations",
+          "type": "task",
+          "status": "pending",
+          "priority": 3,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["hotkey-registration"],
+          "labels": ["hotkeys", "built-in"]
+        },
+        {
+          "id": "custom-hotkeys",
+          "description": "Allow users to customize hotkey bindings",
+          "type": "task",
+          "status": "pending",
+          "priority": 3,
+          "assigned_agent_type": "ui_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["built-in-hotkeys"],
+          "labels": ["hotkeys", "customization"]
+        }
+      ],
+      "labels": ["hotkeys", "usability"]
+    },
+    {
+      "id": "plugin-system",
+      "description": "Create extensible plugin architecture",
+      "type": "epic",
+      "status": "pending",
+      "priority": 4,
+      "assigned_agent_type": "architect",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["core-architecture", "ui-framework"],
+      "children": [
+        {
+          "id": "plugin-loader",
+          "description": "Implement plugin discovery and loading system",
+          "type": "task",
+          "status": "pending",
+          "priority": 4,
+          "assigned_agent_type": "architect",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["plugins", "loading"]
+        },
+        {
+          "id": "plugin-security",
+          "description": "Implement plugin security and sandboxing",
+          "type": "task",
+          "status": "pending",
+          "priority": 4,
+          "assigned_agent_type": "security_developer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["plugin-loader"],
+          "labels": ["plugins", "security"]
+        },
+        {
+          "id": "plugin-api",
+          "description": "Create comprehensive plugin API documentation",
+          "type": "task",
+          "status": "pending",
+          "priority": 4,
+          "assigned_agent_type": "technical_writer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["plugin-security"],
+          "labels": ["plugins", "documentation"]
+        }
+      ],
+      "labels": ["plugins", "extensibility"]
+    },
+    {
+      "id": "testing-qa",
+      "description": "Implement comprehensive testing and quality assurance",
+      "type": "epic",
+      "status": "pending",
+      "priority": 2,
+      "assigned_agent_type": "qa_engineer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "dependencies": ["core-architecture"],
+      "children": [
+        {
+          "id": "unit-tests",
+          "description": "Implement unit test suite for all components",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "qa_engineer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["testing", "unit"]
+        },
+        {
+          "id": "integration-tests",
+          "description": "Create integration tests for system components",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "qa_engineer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["unit-tests"],
+          "labels": ["testing", "integration"]
+        },
+        {
+          "id": "performance-tests",
+          "description": "Implement performance and load testing",
+          "type": "task",
+          "status": "pending",
+          "priority": 2,
+          "assigned_agent_type": "qa_engineer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["integration-tests"],
+          "labels": ["testing", "performance"]
+        }
+      ],
+      "labels": ["testing", "qa"]
+    },
+    {
+      "id": "documentation",
+      "description": "Create comprehensive documentation and guides",
+      "type": "epic",
+      "status": "pending",
+      "priority": 3,
+      "assigned_agent_type": "technical_writer",
+      "creation_timestamp": "2024-01-15T00:00:00Z",
+      "children": [
+        {
+          "id": "user-guide",
+          "description": "Write comprehensive user guide and tutorials",
+          "type": "task",
+          "status": "pending",
+          "priority": 3,
+          "assigned_agent_type": "technical_writer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["documentation", "user"]
+        },
+        {
+          "id": "developer-guide",
+          "description": "Create developer documentation and API reference",
+          "type": "task",
+          "status": "pending",
+          "priority": 3,
+          "assigned_agent_type": "technical_writer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "labels": ["documentation", "developer"]
+        },
+        {
+          "id": "api-docs",
+          "description": "Generate API documentation from code",
+          "type": "task",
+          "status": "pending",
+          "priority": 3,
+          "assigned_agent_type": "technical_writer",
+          "creation_timestamp": "2024-01-15T00:00:00Z",
+          "dependencies": ["developer-guide"],
+          "labels": ["documentation", "api"]
+        }
+      ],
+      "labels": ["documentation", "guides"]
+    }
+  ],
+  "labels": ["project", "edex-ui", "modern"],
+  "artifacts": {
+    "repository": "https://github.com/user/modern-edex-ui",
+    "specs_folder": "./specs/",
+    "architecture_diagram": "./docs/architecture.md"
+  }
+}

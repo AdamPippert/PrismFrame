@@ -1,0 +1,25 @@
+[package]
+name = "modern-edex-ui"
+version = "1.0.0"
+description = "Modern eDEX-UI - A sci-fi terminal emulator"
+authors = ["Modern eDEX Team"]
+license = "GPL-3.0"
+repository = ""
+edition = "2021"
+rust-version = "1.60"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.5", features = ["dialog-ask", "dialog-confirm", "dialog-message", "dialog-open", "dialog-save", "fs-all", "os-all", "path-all", "process-relaunch", "process-exit", "shell-open"] }
+sysinfo = "0.30"
+tokio = { version = "1.0", features = ["full"] }
+portable-pty = "0.8"
+
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

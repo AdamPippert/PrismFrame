@@ -1,0 +1,37 @@
+{
+  "name": "Classic eDEX-UI",
+  "description": "The original eDEX-UI theme with classic neon green interface",
+  "colors": {
+    "primary": "#00ff88",
+    "secondary": "#0088ff",
+    "background": "#0a0a0a",
+    "panel": "#1a1a2e",
+    "text": "#ffffff",
+    "border": "#00ff88",
+    "accent": "#ff0088",
+    "success": "#00ff88",
+    "warning": "#ffaa00",
+    "error": "#ff0044"
+  },
+  "fonts": {
+    "main": "'Fira Code', 'Courier New', monospace",
+    "size": "14px"
+  },
+  "terminal": {
+    "background": "#000000",
+    "foreground": "#00ff88",
+    "cursor": "#00ff88",
+    "selection": "rgba(0, 255, 136, 0.3)"
+  },
+  "layout": {
+    "panels": ["system-monitor", "terminal", "file-explorer"],
+    "glow": true,
+    "scanlines": false
+  },
+  "animations": {
+    "glow": true,
+    "scanlines": false,
+    "fade": true,
+    "pulse": false
+  }
+}

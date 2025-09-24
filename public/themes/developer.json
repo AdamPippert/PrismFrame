@@ -1,0 +1,37 @@
+{
+  "name": "Developer",
+  "description": "Developer-friendly theme with purple and orange accents",
+  "colors": {
+    "primary": "#bb66ff",
+    "secondary": "#ff8844",
+    "background": "#1a0a1a",
+    "panel": "#2a1a2a",
+    "text": "#ffffff",
+    "border": "#bb66ff",
+    "accent": "#44ff88",
+    "success": "#44ff88",
+    "warning": "#ffaa44",
+    "error": "#ff4466"
+  },
+  "fonts": {
+    "main": "'Hack', 'Fira Code', monospace",
+    "size": "14px"
+  },
+  "terminal": {
+    "background": "#0a0a0a",
+    "foreground": "#bb66ff",
+    "cursor": "#ff8844",
+    "selection": "rgba(187, 102, 255, 0.3)"
+  },
+  "layout": {
+    "panels": ["system-monitor", "terminal", "file-explorer"],
+    "glow": true,
+    "scanlines": false
+  },
+  "animations": {
+    "glow": true,
+    "scanlines": false,
+    "fade": true,
+    "pulse": false
+  }
+}

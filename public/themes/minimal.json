@@ -1,0 +1,37 @@
+{
+  "name": "Minimal",
+  "description": "Clean, minimal theme with subtle colors and no distractions",
+  "colors": {
+    "primary": "#666666",
+    "secondary": "#999999",
+    "background": "#f5f5f5",
+    "panel": "#ffffff",
+    "text": "#333333",
+    "border": "#cccccc",
+    "accent": "#007acc",
+    "success": "#28a745",
+    "warning": "#ffc107",
+    "error": "#dc3545"
+  },
+  "fonts": {
+    "main": "'SF Mono', 'Monaco', 'Inconsolata', monospace",
+    "size": "14px"
+  },
+  "terminal": {
+    "background": "#ffffff",
+    "foreground": "#333333",
+    "cursor": "#007acc",
+    "selection": "rgba(0, 122, 204, 0.2)"
+  },
+  "layout": {
+    "panels": ["system-monitor", "terminal", "file-explorer"],
+    "glow": false,
+    "scanlines": false
+  },
+  "animations": {
+    "glow": false,
+    "scanlines": false,
+    "fade": false,
+    "pulse": false
+  }
+}

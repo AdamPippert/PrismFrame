@@ -1,0 +1,37 @@
+{
+  "name": "Cyberpunk",
+  "description": "High-contrast cyberpunk theme with magenta and cyan accents",
+  "colors": {
+    "primary": "#ff0088",
+    "secondary": "#00ffff",
+    "background": "#0d001a",
+    "panel": "#1a0033",
+    "text": "#ffffff",
+    "border": "#ff0088",
+    "accent": "#ffff00",
+    "success": "#00ff88",
+    "warning": "#ffaa00",
+    "error": "#ff0044"
+  },
+  "fonts": {
+    "main": "'JetBrains Mono', 'Fira Code', monospace",
+    "size": "14px"
+  },
+  "terminal": {
+    "background": "#000011",
+    "foreground": "#ff0088",
+    "cursor": "#00ffff",
+    "selection": "rgba(255, 0, 136, 0.3)"
+  },
+  "layout": {
+    "panels": ["system-monitor", "terminal", "file-explorer"],
+    "glow": true,
+    "scanlines": true
+  },
+  "animations": {
+    "glow": true,
+    "scanlines": true,
+    "fade": true,
+    "pulse": true
+  }
+}
