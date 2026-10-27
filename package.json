@@ -30,6 +30,9 @@
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
+  "overrides": {
+    "rollup": "3.30.0"
+  },
   "author": "PrismFrame Team",
   "license": "GPL-3.0"
 }
